@@ -4,9 +4,11 @@
 # Setting up selenium-cucumber-java
 - Install Java and set path.
 - Install Maven and set path.
-- Change the path of the webdriver in StepsDefs.java "D:\\project\\Java\\Cucumber\\Cucumber-selenium\\cucumber_selenium\\chromedriver.exe".
+- Change the path of the webdriver in RunCucumberTest.java
+- Webdriver should match chromium version 
 # Running features
 - Goto project directory.
 - Use "mvn test" command to run features.
-- Use mvn test -Dcucumber.options="classpath:features/my_first.feature" to run specific feature if you have multiple feature files.
+- Use "mvn install" if the "generated-report" won't appear
+- Use "mvn clean" to delete the generated files (screenshots included) 
 - Now Write your own tests in feature file using <a href="https://github.com/firashajbi/cucumber_selenium/blob/master/doc/predsteps.md">Predefined Steps</a> .

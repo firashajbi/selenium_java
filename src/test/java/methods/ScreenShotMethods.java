@@ -5,6 +5,8 @@ import java.io.IOException;
 //import java.text.DateFormat;
 //import java.text.SimpleDateFormat;
 //import java.util.Calendar;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,6 +21,7 @@ public class ScreenShotMethods implements BaseTest {
 
 	/** Method to take screen shot and save the file */
 	public void takeScreenShot(String string) throws IOException {
+		Files.createDirectories(Paths.get("./screenshots"));
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		try {
 			String newfile = "./screenshots/" + string + ".png";
